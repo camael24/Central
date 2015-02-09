@@ -63,7 +63,7 @@ foreach ($f as $class) {
     $c  = substr($class['alias'], strrpos($class['alias'], '\\')+1);
 
     $out .= 'namespace '.$ns.' {'."\n";
-    $out .= 'class '.$c.' extends '.$class['class'].' {}'."\n";
+    $out .= 'class '.$c.' extends \\'.$class['class'].' {}'."\n";
     $out .= '}'."\n";
 
 }
